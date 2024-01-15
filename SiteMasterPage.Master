@@ -1,0 +1,44 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SiteMasterPage.master.cs" Inherits="CadastroHotel.SiteMasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <h1> Bem-vindo ao Gomes's Hotel - Sua Casa Longe de Casa! </h1>
+        <asp:Menu ID="Menu1" runat="server" BackColor="#F7F6F3" DynamicHorizontalOffset="2" Font-Names="Verdana" Font-Size="1.2em" ForeColor="#7C6F57" Orientation="Horizontal" StaticSubMenuIndent="10px">
+            <DynamicHoverStyle BackColor="#7C6F57" ForeColor="White" />
+            <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+            <DynamicMenuStyle BackColor="#F7F6F3" />
+            <DynamicSelectedStyle BackColor="#5D7B9D" />
+            <Items>
+                <asp:MenuItem Text="Home" Value="Home" NavigateUrl="~/Index.aspx"></asp:MenuItem>
+                <asp:MenuItem Text="Cliente" Value="Client" NavigateUrl="~/Client.aspx"></asp:MenuItem>
+                <asp:MenuItem Text="Quarto" Value="Badroom" NavigateUrl="~/Quarto.aspx"></asp:MenuItem>
+                <asp:MenuItem Text="Reserva" Value="Reserva" NavigateUrl="~/Reserva.aspx"></asp:MenuItem>
+            </Items>
+            <StaticHoverStyle BackColor="#7C6F57" ForeColor="White" />
+            <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+            <StaticSelectedStyle BackColor="#5D7B9D" />
+        </asp:Menu>
+        <p>No coração do Rio de Janeiro, o Gomes's Hotel é mais do que um destino, é uma experiência. Estamos dedicados a oferecer a você uma estadia excepcional. <br />
+            Ao entrar no <strong>Gomes's Hotel</strong>, você será recebido por um ambiente elegante e acolhedor, projetado para tornar sua estadia memorável.
+        </p>
+        
+
+        <div>            
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+        <asp:Image ID="Image1" runat="server" Height="368px" ImageUrl="~/Image/exterior.jpg" Width="1012px" />
+        <footer>Site criado pelo desenvolvedor <strong>Matheus Gomes</strong> </footer>
+    </form>
+</body>
+</html>
